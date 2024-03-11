@@ -11,7 +11,11 @@ const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PORT = 8888 } = process.env;
 const base = 'https://api-m.sandbox.paypal.com';
 const app = express();
 
-app.use(cors());
+// Configure CORS middleware
+app.use(cors({
+  origin: 'https://www.sicktixs.com', // Allow requests from this origin
+}));
+
 app.use(express.json());
 
 // Configure nodemailer transporter
