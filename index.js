@@ -8,7 +8,8 @@ import nodemailer from 'nodemailer';
 dotenv.config();
 
 const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PORT = 8888 } = process.env;
-const base = 'https://api-m.sandbox.paypal.com';
+const base = 'https://api.paypal.com'; // Live PayPal API URL
+
 const app = express();
 
 // Configure CORS middleware
